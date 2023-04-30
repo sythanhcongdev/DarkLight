@@ -1,0 +1,6 @@
+framework module Pods_DarkLight_DarkLightUITests {
+  umbrella header "Pods-DarkLight-DarkLightUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
