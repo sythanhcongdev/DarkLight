@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "DarkLightSVG.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

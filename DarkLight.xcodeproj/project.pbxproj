@@ -20,6 +20,8 @@
 		ECE3AFAC2A00B22000721F4D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFAA2A00B22000721F4D /* MainTabBarViewController.swift */; };
 		ECE3AFB12A00B29C00721F4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */; };
 		ECE3AFB22A00B29C00721F4D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE3AFB02A00B29C00721F4D /* HomeViewController.xib */; };
+		ECE3AFB52A00B70300721F4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFB32A00B70300721F4D /* SearchViewController.swift */; };
+		ECE3AFB62A00B70300721F4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE3AFB42A00B70300721F4D /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		ECE3AFAA2A00B22000721F4D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ECE3AFB02A00B29C00721F4D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		ECE3AFB32A00B70300721F4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		ECE3AFB42A00B70300721F4D /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 			children = (
 				ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */,
 				ECE3AFB02A00B29C00721F4D /* HomeViewController.xib */,
+				ECE3AFB32A00B70300721F4D /* SearchViewController.swift */,
+				ECE3AFB42A00B70300721F4D /* SearchViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				ECE3AF7C29FE0E1900721F4D /* LaunchScreen.storyboard in Resources */,
 				ECE3AF7929FE0E1900721F4D /* Assets.xcassets in Resources */,
+				ECE3AFB62A00B70300721F4D /* SearchViewController.xib in Resources */,
 				ECE3AFB22A00B29C00721F4D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE3AFB52A00B70300721F4D /* SearchViewController.swift in Sources */,
 				ECE3AFB12A00B29C00721F4D /* HomeViewController.swift in Sources */,
 				ECE3AFAC2A00B22000721F4D /* MainTabBarViewController.swift in Sources */,
 				ECE3AF7029FE0E1700721F4D /* AppDelegate.swift in Sources */,

@@ -13,7 +13,14 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureNavbar()
         playerView.load(withVideoId: "K8bbfIXWSdU")
+    }
+    
+     
+    
+    private func configureNavbar() {
+        var image = UIImage(named: "DarkLight-100x45")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
     }
 }
