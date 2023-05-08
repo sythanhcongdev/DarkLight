@@ -17,7 +17,6 @@
 		ECE3AF8729FE0E1900721F4D /* DarkLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AF8629FE0E1900721F4D /* DarkLightTests.swift */; };
 		ECE3AF9129FE0E1900721F4D /* DarkLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AF9029FE0E1900721F4D /* DarkLightUITests.swift */; };
 		ECE3AF9329FE0E1900721F4D /* DarkLightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AF9229FE0E1900721F4D /* DarkLightUITestsLaunchTests.swift */; };
-		ECE3AFAC2A00B22000721F4D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFAA2A00B22000721F4D /* MainTabBarViewController.swift */; };
 		ECE3AFB12A00B29C00721F4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */; };
 		ECE3AFB22A00B29C00721F4D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE3AFB02A00B29C00721F4D /* HomeViewController.xib */; };
 		ECE3AFB52A00B70300721F4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3AFB32A00B70300721F4D /* SearchViewController.swift */; };
@@ -62,7 +61,6 @@
 		ECE3AF8C29FE0E1900721F4D /* DarkLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE3AF9029FE0E1900721F4D /* DarkLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkLightUITests.swift; sourceTree = "<group>"; };
 		ECE3AF9229FE0E1900721F4D /* DarkLightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkLightUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ECE3AFAA2A00B22000721F4D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ECE3AFB02A00B29C00721F4D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		ECE3AFB32A00B70300721F4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +143,9 @@
 		ECE3AF6E29FE0E1700721F4D /* DarkLight */ = {
 			isa = PBXGroup;
 			children = (
-				ECE3AFA82A00B1EE00721F4D /* Controller */,
+				ECE3AFBA2A09529900721F4D /* Presentation */,
+				ECE3AFB92A09529200721F4D /* Domain */,
+				ECE3AFB82A09528900721F4D /* Data */,
 				ECE3AF6F29FE0E1700721F4D /* AppDelegate.swift */,
 				ECE3AF7129FE0E1700721F4D /* SceneDelegate.swift */,
 				ECE3AF7829FE0E1900721F4D /* Assets.xcassets */,
@@ -172,24 +172,7 @@
 			path = DarkLightUITests;
 			sourceTree = "<group>";
 		};
-		ECE3AFA82A00B1EE00721F4D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				ECE3AFAE2A00B28500721F4D /* View */,
-				ECE3AFA92A00B20F00721F4D /* MainTabBarViewController */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		ECE3AFA92A00B20F00721F4D /* MainTabBarViewController */ = {
-			isa = PBXGroup;
-			children = (
-				ECE3AFAA2A00B22000721F4D /* MainTabBarViewController.swift */,
-			);
-			path = MainTabBarViewController;
-			sourceTree = "<group>";
-		};
-		ECE3AFAE2A00B28500721F4D /* View */ = {
+		ECE3AFAE2A00B28500721F4D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				ECE3AFAF2A00B29C00721F4D /* HomeViewController.swift */,
@@ -197,7 +180,133 @@
 				ECE3AFB32A00B70300721F4D /* SearchViewController.swift */,
 				ECE3AFB42A00B70300721F4D /* SearchViewController.xib */,
 			);
-			path = View;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECE3AFB82A09528900721F4D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3AFBB2A0952C000721F4D /* API */,
+				ECE3AFBC2A0952CA00721F4D /* GateWay */,
+				ECE3AFBE2A0952DD00721F4D /* Translator */,
+				ECE3AFBD2A0952D200721F4D /* DataStore */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ECE3AFB92A09529200721F4D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3AFC12A0952FC00721F4D /* Entity */,
+				ECE3AFC02A0952F400721F4D /* GateWay */,
+				ECE3AFBF2A0952EB00721F4D /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		ECE3AFBA2A09529900721F4D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				ECE3AFAE2A00B28500721F4D /* ViewController */,
+				ECE3AFC72A09536500721F4D /* Presenter */,
+				ECE3AFC62A09535C00721F4D /* ViewModel */,
+				ECE3AFC52A09535000721F4D /* ViewData */,
+				ECE3AFC42A09534600721F4D /* Builder */,
+				ECE3AFC32A09533E00721F4D /* Router */,
+				ECE3AFC22A09533200721F4D /* Translator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ECE3AFBB2A0952C000721F4D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ECE3AFBC2A0952CA00721F4D /* GateWay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GateWay;
+			sourceTree = "<group>";
+		};
+		ECE3AFBD2A0952D200721F4D /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		ECE3AFBE2A0952DD00721F4D /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		ECE3AFBF2A0952EB00721F4D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		ECE3AFC02A0952F400721F4D /* GateWay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GateWay;
+			sourceTree = "<group>";
+		};
+		ECE3AFC12A0952FC00721F4D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ECE3AFC22A09533200721F4D /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		ECE3AFC32A09533E00721F4D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ECE3AFC42A09534600721F4D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		ECE3AFC52A09535000721F4D /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
+		ECE3AFC62A09535C00721F4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ECE3AFC72A09536500721F4D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,7 +551,6 @@
 			files = (
 				ECE3AFB52A00B70300721F4D /* SearchViewController.swift in Sources */,
 				ECE3AFB12A00B29C00721F4D /* HomeViewController.swift in Sources */,
-				ECE3AFAC2A00B22000721F4D /* MainTabBarViewController.swift in Sources */,
 				ECE3AF7029FE0E1700721F4D /* AppDelegate.swift in Sources */,
 				ECE3AF7229FE0E1700721F4D /* SceneDelegate.swift in Sources */,
 			);
